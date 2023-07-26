@@ -1,0 +1,120 @@
+:root
+      {
+        /* Layoutspezifisch überschreiben */
+        --link: lightgray;
+        --font:'Courier New', Courier, monospace;
+        --font2:arial,verdana,sans-serif;
+        --wrap:1200px;
+        --mar-r:40px;
+        --mar-l:40px;
+      }
+    
+html
+      {
+        font-family:var(--font);
+        color:black;
+        background-color: rgb(229, 216, 255);
+    }
+
+body
+      {
+          text-align: center;
+          background-color: rgb(229, 216, 255);
+      }
+
+header
+        {
+            text-align: center;
+            background: darkblue;
+            height: 100px;
+            line-height: 100px;
+            color: rgb(229, 216, 255);
+            margin-left: 3%;
+            margin-right: 3%;
+            margin-top: 3%;
+            margin-bottom: 0%;
+        }
+
+        h1  
+            {
+                font-size: 4em;
+            }
+
+nav, footer, fieldset
+        {
+            margin-left: 3%;
+            margin-right: 3%;
+            margin-top: 1%;
+            margin-bottom: 3%;
+        }
+
+nav ul, footer ul
+        {
+            list-style: none;
+            padding: 0%;
+        }
+
+nav li, footer li
+        {
+            float: left;
+            min-width: 25%;
+            text-align: center;
+            line-height: 4em;
+            background: darkblue;
+        }
+
+article
+        {
+            text-align: inherit;
+            padding-left: 10%;
+            padding-right: 10%;
+            margin-top: 6%;
+        }
+
+div > img
+        {
+            margin-top: 1.5%;
+        }
+
+nav a, footer a       
+        {
+            color: rgb(229, 216, 255);
+            text-decoration: none;
+            text-shadow: 2px;
+            font-size: 1.3em;
+        }
+
+nav a:active
+        {
+            color: blue;
+            text-decoration: none;
+            text-shadow: 2px;
+            font-size: 1.3em;
+            background-color: rgb(229, 216, 255);
+        }
+
+    .flex
+        {
+            display:flex;
+            justify-content: space-around;
+
+        }
+    .text p
+        {
+            padding-top: 1%;
+            padding-right: 1%;
+            padding-bottom: 2%;
+            margin-bottom: 10px;
+        }
+
+    .flexbox > article
+        {
+            display: flex;
+            flex-direction: column;
+            align-items:stretch;
+        }
+
+    .impressum
+        {
+          text-align: inherit;
+        }

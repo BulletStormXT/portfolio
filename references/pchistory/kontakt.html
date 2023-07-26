@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Geschichte des PC :: Kontakt</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <style>
+        div{margin-bottom:1em;}
+        label{min-width:120px;display:inline-block;}
+    </style>
+    
+</head>
+ 
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Kontakt</h1> 
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rechenmaschinen.html">Alte Rechenmaschinen</a></li>
+                <li><a href="rechner.html">Vom Rechner zum PC</a></li>
+                <li><a href="pc.html">Der PC heute</a></li>
+            </ul>
+        </nav>
+
+       
+        <div>
+
+            <form method="POST" action="kontakt.php">
+                <fieldset>
+                  <legend>Nehmen Sie Kontakt mit uns auf</legend>
+                <!-- Anredeauswahlmöglichkeit Herr/Frau - recherchieren Sie hierbei nach dem input type="radio" oder dem Element select-->
+                <div>
+                    <input type="radio" name="anrede" value="Frau" id="frau">
+                    <label for="frau">Frau</label>
+                    <input type="radio" name="anrede" value="Herr" id="herr">
+                    <label for="herr">Herr</label>
+                    <input type="radio" name="anrede" value="Divers" id="divers">
+                    <label for="divers">Divers</label>
+                 </div>
+                 <div>
+                    <label for="vorname">Vorname*:</label>
+                    <input name="vorname" id="vorname" required="required">
+                 </div>
+                 <div>
+                    <label for="nachname">Nachname*:</label>
+                    <input name="nachname" id="nachname" required="required">
+                 </div>
+                 <div>
+                    <label for="strasse">Straße:</label>
+                    <input name="strasse" id="strasse" >
+                  </div>
+                  <div>        
+                    <label for="hausnummer">Hausnummer:</label>
+                    <input name="hausnummer" id="hausnummer">
+                  </div>
+                 <div>
+                    <label for="plz">PLZ:</label> 
+                    <input name="plz" id="plz" pattern="^[\d]{5}$">
+                 </div>   
+                  <div>        
+                   <label for="stadt">Stadt:</label>
+                   <input name="stadt" id="stadt">
+                  </div>
+                 <!-- Email -->
+                  <div>
+                    <label for="email">Email*:</label>
+                    <input type="email" name="email" id="email" placeholder="mail@domain.de" required="required">
+                  </div>  
+                 <div>
+                   <label for="tel">Telefon:</label>
+                   <input type="tel" id="tel" name="tel">
+                 </div>
+                 <div>
+                    <p>Wie dürfen wir mit Ihnen Kontakt aufnehmen?</p>
+                    <input type="checkbox" name="contactme[]" value="telefonisch" id="telefonisch">
+                    <label for="telefonisch">Telefon</label>
+                    <input type="checkbox" name="contactme[]" value="email" id="c-email" checked>
+                    <label for="c-email">Email</label>
+                    <input type="checkbox" name="contactme[]" value="postalisch" id="postalisch">
+                    <label for="postalisch">Brief</label>
+                    <input type="checkbox" name="contactme[]" value="garnicht" id="garnicht">
+                    <label for="garnicht">Kein Kontakt gewünscht</label>
+                 </div>
+                 <div>
+                    <label for="betreff">Betreff:</label>
+                    <select name="betreff" id="betreff" required="required">
+                     <option value="nichts ausgewählt">-- bitte auswählen --</option>
+                     <option>Anregungen & Erweiterungen</option>
+                     <option>Normale Kontaktaufnahme</option>
+                     <option>Anderes</option>
+                    </select>
+                </div>
+                 <div>  
+                    <label for="message">Ihre Nachricht:</label><br>
+                    <textarea name="message" id="message" cols="50" rows="8">Ihre Nachricht</textarea>
+                 </div>   
+              </fieldset>    
+                <input type="submit" value="senden">
+               </form>  
+               <p>
+                   * Diese Felder müssen ausgefüllt werden!
+               </p>
+        </div>
+
+        <footer>
+            <ul>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li><a class="active" href="kontakt.html">Kontakt</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
+

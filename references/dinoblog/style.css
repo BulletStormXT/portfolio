@@ -1,0 +1,70 @@
+/* Inline vs. Block-Elemente */
+/* Inline-Elemte nejmen nur dann PÜlatz ihres Inhalts ein und können nebeneinander stehen - Blockelemente verschieben nachfolgende Elemente in die nächste Zeile */
+/* Blockelemente sin u.a.: p h1-h6 ul li div */
+/* Inlineelemente sind u.a.: a img span */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Bruno Ace';
+    font-style: normal;
+    font-weight: 400;
+    src: url(font/bruno-ace-v1-latin-regular.woff2) format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url(font/bruno-ace-v1-latin-regular.woff) format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+body
+    {
+        font-family: 'Bruno Ace';
+        width: 100vw;
+        min-height: 200vh;
+        text-align: center;
+        color: beige;
+        /* background-color: darkslategray;
+        background-color: rgb(155, 110, 255);
+
+        background-color: #333333; */
+        background-image: url(pics/darksand.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        
+    }
+
+
+
+
+a
+    {
+        display: inline-block; 
+        font-size: 20px;
+        margin: 10px 10px;
+        padding: 20px 20px;
+        color:orange;
+    }    
+
+main div
+    {
+        border: 2px solid black;
+        padding: 20px 30px;
+        /* background-color: bisque; */
+        background-color: rgba(255, 228, 196, 0.3);
+        color: rgb(255, 255, 255);
+        text-align: justify;
+        display: inline-block;
+        width: 50%;
+        margin: 20px auto;
+    }
+img 
+    {
+        width: 100%;
+        
+    }
+
+h1, h2, h3 
+    {
+        font-family: 'Bruno Ace';
+
+        display: inline-block;
+        text-align: center;
+        margin: 20px auto;
+        text-decoration: underline;
+    }
