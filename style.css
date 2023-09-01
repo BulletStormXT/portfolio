@@ -1,4 +1,126 @@
-body 
-        {
-            background-color: black;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: darkslateblue;
+}
+.logo-text {
+  color: white;
+}
+
+.hamburger-icon {
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.hamburger-icon .fa-bars,
+.hamburger-icon .fa-x {
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hamburger-icon input[type="checkbox"] {
+  appearance: none;
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+}
+.navigation a {
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    display: block;
+  }
+  .navigation {
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+  }
+  .logo {
+    display: flex;
+    justify-content: space-between;
+  }
+  .hamburger-icon {
+    display: block;
+  }
+  .fa-x {
+    display: none;
+  }
+  header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
+    margin-top: 1rem;
+    height: 100px;
+  }
+  header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+    display: none;
+  }
+  header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
+    display: inline-block;
+  }
+}
+
+/* Content CSS */
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.container:nth-child(1) {
+  margin-top: 0;
+}
+
+.container p {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px black;
+  transition: all 0.5s linear;
+}
+.container button {
+  color: white;
+}
+
+.container-1 {
+  background-image: url("https://images4.alphacoders.com/936/thumb-1920-936378.jpg");
+}
+.container-2 {
+  background-image: url("http://4kwallpapers.com/images/walls/thumbs_2t/8085.jpg");
+}
+.container-3 {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/630/43/768/space-earth-sun-solar-system-wallpaper-preview.jpg");
+}
+
+.container-4 {
+  background-image: url("https://www.hdwallpapers.in/download/purple_planet_and_purple_space_hd_purple-2560x1440.jpg");
+}
+.container-5 {
+  background-image: url("https://w0.peakpx.com/wallpaper/445/837/HD-wallpaper-night-moon-galaxy-moon-night-space.jpg");
+}
