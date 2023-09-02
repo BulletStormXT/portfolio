@@ -19,7 +19,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: darkslateblue;
+  background-color: rgba(26, 18, 81, 0.577);
 }
 .logo-text {
   color: white;
