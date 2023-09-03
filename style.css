@@ -19,7 +19,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgba(26, 18, 81, 0.577);
+  background-color: rgba(26, 18, 81, 0.6);
 }
 .logo-text {
   color: white;
@@ -106,6 +106,10 @@ header {
 }
 .container button {
   color: white;
+}
+
+.container-0 {
+  background-image: url("./pics/coding.jpg");
 }
 
 .container-1 {
