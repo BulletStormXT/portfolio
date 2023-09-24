@@ -9,6 +9,11 @@ body {
   background: #ffffff;
   color: rgb(0, 0, 0);
   -webkit-font-smoothing: antialiased;
+  /* background-image: url(/pic/underConstruction.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 40%; */
+
 }
 
 body,
@@ -16,22 +21,18 @@ input,
 button {
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(/pic/underConstruction.png);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 40%;
 }
 
 button {
   cursor: pointer;
 }
 
-img {
+/* img {
   height: 300px;
-}
+} */
 
-@media screen and (max-width: 720px) {
+/* @media screen and (max-width: 720px) {
   body {
     background-size: 100%;
   }
-}
+} */
