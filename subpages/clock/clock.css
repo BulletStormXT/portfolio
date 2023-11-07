@@ -1,0 +1,138 @@
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),10%,90%);
+	--fg: hsl(var(--hue),10%,10%);
+	--primary: hsl(var(--hue),90%,50%);
+	--trans-dur: 0.3s;
+	--trans-timing: cubic-bezier(0.64,0,0.78,0);
+	font-size: calc(32px + (64 - 32) * (100vw - 320px) / (2560 - 320));
+}
+body {
+	/* background-image: url(../../assets/img/bg.jpg); */
+	background: #040404 url("../../assets/img/bg.jpg") top center no-repeat;
+	background-color: var(--bg);
+	background-size: cover;
+    /* background-image: linear-gradient(hsla(var(--hue),10%,10%,0),hsla(var(--hue),10%,10%,0.2)); */
+	color: var(--fg);
+	display: flex;
+	font: 1em/1.5 sans-serif;
+	height: 100vh;
+	min-height: 8.75em;
+	transition:
+		background-color var(--trans-dur),
+		color var(--trans-dur);
+}
+.clock {
+	--shadow1: hsl(var(--hue),10%,55%);
+	--shadow2: hsl(0,0%,100%);
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: repeat(2,1fr);
+	grid-gap: 0.75em 0.5em;
+	margin: auto;
+	padding: 0.5em;
+}
+.clock__digit {
+	position: relative;
+	width: 2em;
+	height: 3.5em;
+}
+.clock__digit-stroke {
+	background-color: hsla(var(--hue),10%,10%,0.13);
+	border-radius: 0.375em 0.375em 0.375em 0.375em / 0.25em 0.25em 0.25em 0.25em;
+	box-shadow:
+		0 0.125em 0.0625em var(--shadow1) inset,
+		0 -0.0625em 0.0625em var(--shadow2) inset;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1.25em;
+	height: 0.5em;
+	transition:
+		background-color var(--trans-dur) var(--trans-timing),
+		box-shadow var(--trans-dur) var(--trans-timing);
+}
+.clock__digit-stroke:nth-child(1),
+.clock__digit-stroke:nth-child(4),
+.clock__digit-stroke:nth-child(7) {
+	left: 0.375em;
+}
+.clock__digit-stroke:nth-child(2),
+.clock__digit-stroke:nth-child(3),
+.clock__digit-stroke:nth-child(5),
+.clock__digit-stroke:nth-child(6) {
+	border-radius: 0.25em 0.25em 0.25em 0.25em / 0.375em 0.375em 0.375em 0.375em;
+	width: 0.5em;
+	height: 1.25em;
+}
+.clock__digit-stroke:nth-child(2),
+.clock__digit-stroke:nth-child(3) {
+	top: 0.375em;
+}
+.clock__digit-stroke:nth-child(3),
+.clock__digit-stroke:nth-child(6) {
+	right: 0;
+	left: auto;
+}
+.clock__digit-stroke:nth-child(5),
+.clock__digit-stroke:nth-child(6) {
+	top: auto;
+	bottom: 0.375em;
+}
+.clock__digit-stroke:nth-child(4) {
+	top: 1.5em;
+}
+.clock__digit-stroke:nth-child(7) {
+	top: auto;
+	bottom: 0;
+}
+[data-digit="0"] .clock__digit-stroke:nth-child(4),
+[data-digit="1"] .clock__digit-stroke:nth-child(1),
+[data-digit="1"] .clock__digit-stroke:nth-child(2),
+[data-digit="1"] .clock__digit-stroke:nth-child(4),
+[data-digit="1"] .clock__digit-stroke:nth-child(5),
+[data-digit="1"] .clock__digit-stroke:nth-child(7),
+[data-digit="2"] .clock__digit-stroke:nth-child(2),
+[data-digit="2"] .clock__digit-stroke:nth-child(6),
+[data-digit="3"] .clock__digit-stroke:nth-child(2),
+[data-digit="3"] .clock__digit-stroke:nth-child(5),
+[data-digit="4"] .clock__digit-stroke:nth-child(1),
+[data-digit="4"] .clock__digit-stroke:nth-child(5),
+[data-digit="4"] .clock__digit-stroke:nth-child(7),
+[data-digit="5"] .clock__digit-stroke:nth-child(3),
+[data-digit="5"] .clock__digit-stroke:nth-child(5),
+[data-digit="6"] .clock__digit-stroke:nth-child(3),
+[data-digit="7"] .clock__digit-stroke:nth-child(2),
+[data-digit="7"] .clock__digit-stroke:nth-child(4),
+[data-digit="7"] .clock__digit-stroke:nth-child(5),
+[data-digit="7"] .clock__digit-stroke:nth-child(7),
+[data-digit="9"] .clock__digit-stroke:nth-child(5) {
+	background-color: hsla(var(--hue),10%,10%,0);
+	box-shadow:
+		0 0 0 var(--shadow1) inset,
+		0 0 0 var(--shadow2) inset;
+}
+[data-digit="0"]:first-child .clock__digit-stroke:not(:nth-child(4)) {
+	background-color: hsla(var(--hue),10%,10%,0.06);
+	box-shadow:
+		0 min(2px,0.0625em) min(2px,0.0625em) var(--shadow1) inset,
+		0 max(-2px,-0.0625em) min(2px,0.0625em) var(--shadow2) inset;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,40%);
+		--fg: hsl(var(--hue),10%,90%);
+	}
+	.clock {
+		--shadow1: hsl(var(--hue),10%,5%);
+		--shadow2: hsl(var(--hue),10%,50%);
+	}
+}
