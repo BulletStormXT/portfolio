@@ -29,6 +29,31 @@ body::before {
   z-index: -1;
 }
 
+/* ? ---------  */
+/* ? Scrollbar  */
+/* ? ---------  */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(53, 232, 136, 0.6);
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(24, 210, 110, 0.8);
+  border-radius: 12px;
+}
+
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
