@@ -16,5 +16,8 @@ function calculateAge() {
 }
 
 // Aktualisieren des Alters im HTML-Element
+// const ageElement = document.getElementsByClassName("myage");
 const ageElement = document.getElementById("alter");
+const ageElement2 = document.getElementById("myage");
 ageElement.textContent = calculateAge();
+ageElement2.textContent = calculateAge();
