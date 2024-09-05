@@ -664,7 +664,10 @@ section .container {
 
 .testimonial-item > p {
   /* margin-top: 20px; */
-  height: 440px;
+  text-align: justify;
+  hyphens: auto;
+  hyphenate-limit-chars: 5 3 3;
+  height: auto;
 }
 
 /*--------------------------------------------------------------
