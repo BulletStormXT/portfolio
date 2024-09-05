@@ -591,6 +591,7 @@ section .container {
 .testimonials .testimonial-item {
   box-sizing: content-box;
   min-height: 320px;
+  /* height: 500px; */
 }
 
 .testimonials .testimonial-item .testimonial-img {
@@ -659,6 +660,11 @@ section .container {
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #18d26e;
+}
+
+.testimonial-item > p {
+  /* margin-top: 20px; */
+  height: 440px;
 }
 
 /*--------------------------------------------------------------
