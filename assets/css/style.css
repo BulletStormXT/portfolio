@@ -731,6 +731,28 @@ section .container {
   border: 2px solid #18d26e;
 }
 
+.resume .resume-item-non-it {
+  color: #ffffff77;
+}
+
+.resume .resume-item-non-it h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #18d26e77;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item-non-it:hover {
+  color: #ffffffaa;
+}
+
+.resume .resume-item-non-it h4:hover {
+  color: #18d26eaa;
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
