@@ -2361,7 +2361,7 @@
     <!-- You can delete the links only if you purchased the pro version. -->
     <!-- Licensing information: https://bootstrapmade.com/license/ -->
     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-    &copy; 2024/11 &bull; SP
+    &copy; 2024/12 &bull; SP
   </div>
 
   <!-- Vendor JS Files -->
@@ -2387,12 +2387,13 @@
     var spinning;
     
     function loading_spinner() {
-      spinning = setTimeout(showPage, 2600);
+      spinning = setTimeout(showPage, 300);
     }
     
     function showPage() {
       document.getElementById("loader").style.display = "none";
-      // document.getElementsByName("hiddenHeader").style.display = "block";
+      // document.getElementsByClassName("hiddenHeader").style.display = "block";
+      // document.getElementById("header").style.display = "inline";
     }
     </script>
 

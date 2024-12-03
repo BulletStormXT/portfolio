@@ -85,6 +85,12 @@ h6 {
 #header {
   transition: ease-in-out 0.3s;
   position: relative;
+  /* *new
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  *new end */
   height: 100vh;
   display: flex;
   align-items: center;
