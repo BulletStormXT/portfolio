@@ -21,8 +21,12 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon32.jpg" rel="icon">
-  <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
-  <link href="assets/img/favicon32.jpg" rel="apple-touch-icon">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link href="assets/certs/sebastian-peinelt.1024x1024.jpg" rel="apple-touch-icon">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="theme-color" content="#040404">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -2757,7 +2761,15 @@
     }
     </script>
 
-
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch((error) => {
+          console.error("Die Offline-Version konnte nicht eingerichtet werden.", error);
+        });
+      });
+    }
+  </script>
 
 </body>
 

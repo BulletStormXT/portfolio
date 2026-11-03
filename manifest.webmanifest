@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "Sebastian Peinelt – Portfolio",
+  "short_name": "Portfolio",
+  "description": "Portfolio von Sebastian Peinelt",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#040404",
+  "theme_color": "#040404",
+  "icons": [
+    {
+      "src": "./assets/certs/sebastian-peinelt.1024x1024.jpg",
+      "sizes": "1024x1024",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
