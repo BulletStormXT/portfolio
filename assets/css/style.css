@@ -1077,6 +1077,7 @@ section .container {
   padding: 20px;
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
+  position: relative;
 }
 
 .contact .info-box i.bx {
@@ -1084,7 +1085,10 @@ section .container {
   color: #18d26e;
   border-radius: 50%;
   padding: 14px;
-  float: left;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.1);
 }
 
